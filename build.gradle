@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.advance'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '5.0.0'
+    compile 'org.apache.poi:ooxml-schemas'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
